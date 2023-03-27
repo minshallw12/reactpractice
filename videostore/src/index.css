@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+  color: white
+}
+
+.video {
+  border: red 2px solid;
+  padding: 10px;
+}
+.video_container {
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+#inventory_label {
+  display: flex;
+  justify-content: center;
+}
+
+#neckflix_label {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
