@@ -18,10 +18,8 @@ export default function Video({
             </div>
             
             <img src={imgUrl} alt="" onClick={()=> setSelectedFilmById(id)}/>
-            <div>
-                Rated: {rating}
-                Copies Available: {copiesAvailable.current}
-
+            <div className="summary">
+                <div className="center"><p>Rated: {rating}</p></div>
             </div>
         </div>
         

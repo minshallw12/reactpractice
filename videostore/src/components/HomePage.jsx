@@ -35,6 +35,7 @@ export default function HomePage({inventory}) {
                     }
                 </div>
             </div>
+            <hr />
             { selectedFilm && <DetailsPanel selected = {selectedFilm} /> }
 
 
