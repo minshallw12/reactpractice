@@ -1,4 +1,11 @@
-export default function Video(props) {
+export default function Video({
+    id,
+    title,
+    imgUrl, 
+    copiesAvailable,
+    setSelectedFilmById,
+    rating, 
+    description}) {
 
     const clickHandler = () => {
         alert("hello")
@@ -7,18 +14,17 @@ export default function Video(props) {
     return (
         <div className="video_item">
             <div className='center'>
-                <h3>{props.title}</h3>
+                <h3>{title}</h3>
             </div>
             
-            <img src={props.imgUrl} alt="" />
+            <img src={imgUrl} alt="" onClick={()=> setSelectedFilmById(id)}/>
             <div>
-                Copies Available: {props.copiesAvailable}
-                <button 
-                    onClick={clickHandler} 
-                    disabled={props.copiesAvailable===0}
-                    >Checkout</button>
+                Rated: {rating}
+                Copies Available: {copiesAvailable.current}
+
             </div>
         </div>
+        
     )
 
 }

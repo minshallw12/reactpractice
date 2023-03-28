@@ -10,7 +10,9 @@ export default function App() {
     <div className="app_container">
       <h1 id="neckflix_label">NECKFLIX</h1>
       <HomePage inventory = {inventory}/>
+      <hr />
     </div>
+
 
   )
 
