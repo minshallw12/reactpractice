@@ -2,7 +2,7 @@ import { useState } from "react"
 import Video from "./Video"
 import DetailsPanel from "./DetailsPanel"
 
-export default function HomePage({inventory}) {
+export default function HomePage({inventory, checkoutOrReturnFilmById}) {
     const [selectedFilm, setSelectedFilm] = useState(null)
 
     const setSelectedFilmById = (id) => {
@@ -36,7 +36,7 @@ export default function HomePage({inventory}) {
                 </div>
             </div>
             <hr />
-            { selectedFilm && <DetailsPanel selected = {selectedFilm} /> }
+            { selectedFilm && <DetailsPanel selected = {selectedFilm} checkoutOrReturnFilmById={checkoutOrReturnFilmById} /> }
 
 
         </div>
