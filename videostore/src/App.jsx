@@ -27,7 +27,7 @@ export default function App() {
       <h1 id="neckflix_label">NECKFLIX</h1>
       <HomePage inventory = {inventory} checkoutOrReturnFilmById={checkoutOrReturnFilmById}/>
       <hr />
-      <footer>© 2023 Video Store</footer>
+      <footer className='center'><div>Copyright© 2023 Neckflix</div></footer>
     </div>
 
 
