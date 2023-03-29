@@ -1,22 +1,21 @@
 export default function DetailsPanel({selected, checkoutOrReturnFilmById}) {
-    console.log(selected)
-    const { id, title, imgUrl, copiesAvailable, rating, description} = selected
+    const { id, Title, Poster, copiesAvailable, Rating, Plot} = selected
 
     return(
         <div className="center">
             <div className="details_panel">
                 <div className="poster">
                     <div className="center">
-                        <h2>{title}</h2>
+                        <h2>{Title}</h2>
                     </div>
                     <div className="center">
-                        <img id="selectedPoster"src={imgUrl} alt="" />
+                        <img id="selectedPoster"src={Poster} alt="" />
                     </div>
                 </div>
 
                 <div className="posterdescription">
-                    <span>Rated {rating}</span>
-                    <p className="description">{description}</p>
+                    <span>Rated {Rating}</span>
+                    <p className="description">{Plot}</p>
                     <div className="center buttondiv">
                         <span>Copies Available: {copiesAvailable.current} / {copiesAvailable.total}</span>
                         
