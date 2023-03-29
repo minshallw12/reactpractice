@@ -7,10 +7,10 @@ body {
   border: red 2px solid;
   padding: 10px;
 }
+
 .video_container {
   display: flex;
   justify-content: space-evenly;
-  
 }
 
 #inventory_label {
@@ -40,7 +40,7 @@ body {
 }
 
 .poster {
-    width: 400px;
+    width: 350px;
     height: 400px;
 }
 .posterTitle {
@@ -54,6 +54,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+#selectedPoster {
+  height: 300px;
 }
 
 .center {
@@ -74,7 +78,8 @@ button {
   padding: 3px;
 }
 .description {
-  max-width: 400px;
+  max-width: 350px;
+  text-align: center;
 }
 
 hr {

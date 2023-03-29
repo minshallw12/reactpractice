@@ -1,5 +1,5 @@
 export default function DetailsPanel({selected, checkoutOrReturnFilmById}) {
-    const { id, Title, Poster, copiesAvailable, Rating, Plot} = selected
+    const { id, Title, Poster, copiesAvailable, Rated, Plot} = selected
 
     return(
         <div className="center">
@@ -14,7 +14,7 @@ export default function DetailsPanel({selected, checkoutOrReturnFilmById}) {
                 </div>
 
                 <div className="posterdescription">
-                    <span>Rated {Rating}</span>
+                    <span>Rated     {Rated}</span>
                     <p className="description">{Plot}</p>
                     <div className="center buttondiv">
                         <span>Copies Available: {copiesAvailable.current} / {copiesAvailable.total}</span>

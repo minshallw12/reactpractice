@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import HomePage from './components/HomePage'
-import orginventory from './data/newdata.json'
+import orginventory from './data/inventory.json'
 import axios from 'axios'
 
 export default function App() {
@@ -32,18 +32,14 @@ export default function App() {
     setInventory(newInventory)
   }
 
-    // const updateInventoryById = (id, newobj) => {
-    //   const newInventory = [...inventory];
-    //   const filmToAdd = newInventory.find(title => title.id ===  id);
-    //   Object.assign(filmToAdd, newobj);
-    //   setInventory(newInventory)
-    // }
+
     const updateInventoryById = (id, updateObj) => {
       const newInventory = [...inventory];
       const filmToUpdate = newInventory.find(film => film.id === id);
       Object.assign(filmToUpdate, updateObj);
       setInventory(newInventory);
     }
+
     useEffect(() => {
       const apiKey = "7f539340";
       console.log(inventory.length)
