@@ -1,30 +1,6 @@
 [
-    {
-        "id": "tt6615224",
-        "copiesAvailable": {
-            "current": 0,
-            "total": 4
-        }
-    },
-    {
-        "id": "tt10151854",
-        "copiesAvailable": {
-            "current": 4,
-            "total": 6
-        }
-    },
-    {
-        "id": "tt12261776",
-        "copiesAvailable": {
-            "current": 2,
-            "total": 6
-        }
-    },
-    {
-        "id": "tt11145118",
-        "copiesAvailable": {
-            "current": 1,
-            "total": 3
-        }
-    }
+    "tt6615224",
+    "tt10151854",
+    "tt12261776",
+    "tt11145118"
 ]

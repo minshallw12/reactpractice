@@ -1,5 +1,20 @@
-export default function DetailsPanel({selected, checkoutOrReturnFilmById}) {
-    const { id, Title, Poster, copiesAvailable, Rated, Plot} = selected
+import axios from 'axios';
+import { Link, useLoaderData } from 'react-router-dom';
+import key from '../data/keys.json'
+
+export async function videoLoader({params}) {
+    console.log(params, "<-- params here")
+    const response = await axios.get(`https://www.omdbapi.com/?i=${params.videoId}&apikey=${key}`)
+    console.log(response, "<-- response here")
+    return response.data;
+}
+
+
+export default function DetailsPanel() {
+
+    const videoData = useLoaderData();
+    console.log(videoData)
+    const { Title, Poster, Rated, Plot } = videoData
 
     return(
         <div className="center">
@@ -16,24 +31,10 @@ export default function DetailsPanel({selected, checkoutOrReturnFilmById}) {
                 <div className="posterdescription">
                     <span>Rated     {Rated}</span>
                     <p className="description">{Plot}</p>
-                    <div className="center buttondiv">
-                        <span>Copies Available: {copiesAvailable.current} / {copiesAvailable.total}</span>
-                        
-                        <div className="button_container">
-                            <button 
-                                disabled={copiesAvailable.current === 0}
-                                onClick={() => checkoutOrReturnFilmById(id, 'checkout')}
-                            >Rent movie</button>
-                            <button 
-                                disabled={copiesAvailable.current === copiesAvailable.total} 
-                                onClick={() => checkoutOrReturnFilmById(id, 'return')}
-                            >Return movie</button>
-                        </div>
-                        
-                    </div>
-
+                    <button>Stream now</button>
+                    <button><Link to='/'>Return home</Link></button>
+                </div>
             </div>
-        </div>
 
             
 
